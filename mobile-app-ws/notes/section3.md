@@ -122,6 +122,13 @@ in PostMan choose Headers
 
 ----
 
+# Chapter 34
+* https://github.com/simplyi/mobile-app-ws-quick-start/blob/master/src/main/java/com/appsdeveloperblog/app/ws/exceptions/AppExceptionsHandler.java
+* [GET] localhost:8080/users/[copy userid which is return while posting]
+* public ResponseEntity<Object> handleSpecificExceptions(Exception ex, WebRequest request)
+> Headers>accept= application/xml
+> Headers>accept= application/json
+
 ----
 
 # Chapter 33
@@ -133,12 +140,6 @@ in PostMan choose Headers
 > Headers>accept= application/json
 
 
-# Chapter 34
-* https://github.com/simplyi/mobile-app-ws-quick-start/blob/master/src/main/java/com/appsdeveloperblog/app/ws/exceptions/AppExceptionsHandler.java
-* [GET] localhost:8080/users/[copy userid which is return while posting]
-* public ResponseEntity<Object> handleSpecificExceptions(Exception ex, WebRequest request)
-> Headers>accept= application/xml
-> Headers>accept= application/json
 
 ----
 
