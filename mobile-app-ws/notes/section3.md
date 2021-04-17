@@ -111,16 +111,6 @@ in PostMan choose Headers
 > Headers>accept= application/json
 
 ----
-
-# Chapter 33
-* https://github.com/simplyi/mobile-app-ws-quick-start/blob/master/src/main/java/com/appsdeveloperblog/app/ws/exceptions/UserServiceException.java
-* https://github.com/simplyi/mobile-app-ws-quick-start/blob/016f087382bf7e2760a29df95793a98a91b0c267/src/main/java/com/appsdeveloperblog/app/ws/ui/model/response/ErrorMessage.java#
-* https://github.com/simplyi/mobile-app-ws-quick-start/blob/master/src/main/java/com/appsdeveloperblog/app/ws/exceptions/AppExceptionsHandler.java
-* [GET] localhost:8080/users/[copy userid which is return while posting]
-> Headers>accept= application/xml
-> Headers>accept= application/json
-
-----
 # Chapter 34
 * https://github.com/simplyi/mobile-app-ws-quick-start/blob/master/src/main/java/com/appsdeveloperblog/app/ws/exceptions/AppExceptionsHandler.java
 * [GET] localhost:8080/users/[copy userid which is return while posting]
@@ -147,7 +137,7 @@ in PostMan choose Headers
 * https://github.com/simplyi/mobile-app-ws-quick-start/blob/master/src/main/java/com/appsdeveloperblog/app/ws/ui/controllers/UserController.java
 * https://github.com/simplyi/mobile-app-ws-quick-start/blob/016f087382bf7e2760a29df95793a98a91b0c267/src/main/java/com/appsdeveloperblog/app/ws/userservice/UserService.java#L6
 * [GET] localhost:8080/users/[copy userid which is return while posting]
-* public ResponseEntity<Object> handleSpecificExceptions(Exception ex, WebRequest request) 
+* handleSpecificExceptions(Exception ex, WebRequest request) 
 > Headers>accept= application/xml
 > Headers>accept= application/json
 
