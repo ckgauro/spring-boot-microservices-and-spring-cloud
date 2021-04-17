@@ -27,8 +27,8 @@ public class UserDetailsRequestModel {
     @Size(min=2,message="Last must not be less than 2 characters")
     private String lastName;
 
-    @NotNull(message = "Email cannot be null")
-    @Email
+   // @NotNull(message = "Email cannot be null")
+   // @Email
     private String email;
 
     @NotNull(message="Password cannot be null")

@@ -4,11 +4,13 @@ import com.appsdeveloperblog.app.ws.ui.model.request.UpdateUserDetailsRequestMod
 import com.appsdeveloperblog.app.ws.ui.model.request.UserDetailsRequestModel;
 import com.appsdeveloperblog.app.ws.ui.model.response.UserRest;
 import com.appsdeveloperblog.app.ws.userservice.UserService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.server.ResponseStatusException;
 
 import javax.validation.Valid;
 import java.util.HashMap;
@@ -17,6 +19,7 @@ import java.util.Map;
 /**
  * @author Chandra
  */
+@Slf4j
 @RestController
 @RequestMapping("/users")
 public class UserController {
@@ -48,12 +51,15 @@ public class UserController {
             consumes = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
     public ResponseEntity<UserRest> createUser( @Valid @RequestBody UserDetailsRequestModel userDetailsRequestModel) {
 
+        log.info("========userDetailsRequestModel===>");
+        log.info(userDetailsRequestModel.toString());
+        log.info("=============userDetailsRequestModel ends=======>");
         UserRest userRest = userService.createUser(userDetailsRequestModel);
         return new ResponseEntity<UserRest>(userRest, HttpStatus.OK);
     }
 
     @PutMapping(path = "/{userId}",produces ={MediaType.APPLICATION_JSON_VALUE,MediaType.APPLICATION_XML_VALUE},
-    consumes ={MediaType.APPLICATION_XML_VALUE, MediaType.APPLICATION_JSON_VALUE} )
+            consumes ={MediaType.APPLICATION_XML_VALUE, MediaType.APPLICATION_JSON_VALUE} )
     public ResponseEntity<UserRest> updateUser(@PathVariable String userId, @Valid @RequestBody UpdateUserDetailsRequestModel updateUserDetailsRequestModel){
         UserRest userRest=users.get(userId);
         userRest.setFirstName(updateUserDetailsRequestModel.getFirstName());
@@ -69,5 +75,10 @@ public class UserController {
         return  ResponseEntity.noContent().build();
     }
 
+    @GetMapping(path = "/test/{id}")
+    public ResponseEntity<Void> test(@PathVariable String id){
+        throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Error in update");
+      //  return  ResponseEntity.noContent().build();
+    }
 
 }
