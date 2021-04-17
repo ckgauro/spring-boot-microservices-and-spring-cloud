@@ -44,15 +44,15 @@ public class UserController {
         }
     }
 
-    @PostMapping(produces = {MediaType.APPLICATION_XML_VALUE, MediaType.APPLICATION_JSON_VALUE},
-            consumes = {MediaType.APPLICATION_XML_VALUE, MediaType.APPLICATION_JSON_VALUE})
-    public ResponseEntity<UserRest> createUser(@Valid @RequestBody UserDetailsRequestModel userDetailsRequestModel) {
+    @PostMapping(produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE},
+            consumes = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
+    public ResponseEntity<UserRest> createUser( @Valid @RequestBody UserDetailsRequestModel userDetailsRequestModel) {
 
         UserRest userRest = userService.createUser(userDetailsRequestModel);
         return new ResponseEntity<UserRest>(userRest, HttpStatus.OK);
     }
 
-    @PutMapping(path = "/{userId}",produces ={MediaType.APPLICATION_XML_VALUE,MediaType.APPLICATION_JSON_VALUE},
+    @PutMapping(path = "/{userId}",produces ={MediaType.APPLICATION_JSON_VALUE,MediaType.APPLICATION_XML_VALUE},
     consumes ={MediaType.APPLICATION_XML_VALUE, MediaType.APPLICATION_JSON_VALUE} )
     public ResponseEntity<UserRest> updateUser(@PathVariable String userId, @Valid @RequestBody UpdateUserDetailsRequestModel updateUserDetailsRequestModel){
         UserRest userRest=users.get(userId);
