@@ -122,9 +122,6 @@ in PostMan choose Headers
 
 ----
 
-# Chapter 34
-* https://github.com/simplyi/mobile-app-ws-quick-start/blob/master/src/main/java/com/appsdeveloperblog/app/ws/exceptions/AppExceptionsHandler.java
-
 ----
 
 # Chapter 33
