@@ -120,7 +120,7 @@ in PostMan choose Headers
 > Headers>accept= application/xml
 > Headers>accept= application/json
 
-----------
+----
 
 # Chapter 34
 * https://github.com/simplyi/mobile-app-ws-quick-start/blob/master/src/main/java/com/appsdeveloperblog/app/ws/exceptions/AppExceptionsHandler.java
@@ -129,7 +129,7 @@ in PostMan choose Headers
 > Headers>accept= application/xml
 > Headers>accept= application/json
 
-----------
+----
 
 # Chapter 34
 * https://github.com/simplyi/mobile-app-ws-quick-start/blob/master/src/main/java/com/appsdeveloperblog/app/ws/exceptions/AppExceptionsHandler.java
@@ -139,7 +139,7 @@ in PostMan choose Headers
 > Headers>accept= application/json
 
 
-----------
+----
 
 # Chapter 35
 * https://github.com/simplyi/mobile-app-ws-quick-start/blob/master/src/main/java/com/appsdeveloperblog/app/ws/ui/controllers/UserController.java
