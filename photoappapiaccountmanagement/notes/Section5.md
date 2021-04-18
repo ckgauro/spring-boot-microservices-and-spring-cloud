@@ -1,11 +1,8 @@
 # Chapter 42
 
 * Users Microservice Responsibilities
-> Create new user( Registration)
-> User Login
-> Get user details
-> Update user details
-> Delete user details
+> Password Reset( Registration)
+> Email verification
 
 -----------
 
