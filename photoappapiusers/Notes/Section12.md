@@ -8,4 +8,13 @@
 			<scope>runtime</scope>
 		</dependency>
 
+* Update in application.properties file
+spring.h2.console.enabled=true
+spring.h2.console.settings.web-allow-others=true
 
+
+-----------------
+
+Now Broswer H2database spring gateapi using  
+
+localhost:8082/users-ws/h2-console
